@@ -7,15 +7,6 @@
       </bo>
     </element>
     <element uuid="58edb762-c219-45bf-9828-1ff7008efc21" manual="true">
-      <element uuid="4df49844-dbde-465b-806b-73912db97ca5" manual="true">
-        <bo>
-          <seg>annex_subclause</seg>
-          <seg>emv2</seg>
-          <seg>0</seg>
-        </bo>
-        <position x="60.0" y="630.0"/>
-        <size width="150.0" height="52.0"/>
-      </element>
       <element uuid="0270bb2b-c92b-4108-a5b6-83f25b21f08b" manual="true">
         <element uuid="83970127-e807-4b58-bbcb-52483a7b0ea2" manual="true">
           <bo>
@@ -25,7 +16,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>i2c</seg>
+          <seg>I2C</seg>
         </bo>
         <position x="510.0" y="490.0"/>
         <size width="151.0" height="50.0"/>
@@ -50,6 +41,7 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="50.0" y="86.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="556551a3-2d9a-4766-b758-e94eb2305399" manual="true">
@@ -60,7 +52,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>m1</seg>
+          <seg>M1</seg>
         </bo>
         <position x="1231.0" y="146.0"/>
         <size width="226.0" height="94.0"/>
@@ -85,6 +77,7 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="50.0" y="86.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="26100dcc-6acc-44ea-adb8-2f5f4561d502" manual="true">
@@ -95,7 +88,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>m2</seg>
+          <seg>M2</seg>
         </bo>
         <position x="1231.0" y="210.0"/>
         <size width="226.0" height="94.0"/>
@@ -120,6 +113,7 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="50.0" y="86.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="2b1415ae-e7bc-4be8-ab84-502aec16f2ac" manual="true">
@@ -130,7 +124,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>m3</seg>
+          <seg>M3</seg>
         </bo>
         <position x="1231.0" y="271.0"/>
         <size width="226.0" height="94.0"/>
@@ -155,6 +149,7 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="50.0" y="86.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="7109374d-a5e3-4490-9303-019405a3a800" manual="true">
@@ -165,7 +160,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>m4</seg>
+          <seg>M4</seg>
         </bo>
         <position x="1230.0" y="332.0"/>
         <size width="226.0" height="94.0"/>
@@ -174,22 +169,23 @@
         <element uuid="7df088a4-bb4c-4538-8876-3621aaaa8d45" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>dof6</seg>
+            <seg>DOF6</seg>
           </bo>
-          <position x="290.0" y="4.0"/>
+          <position x="296.0" y="4.0"/>
         </element>
         <element uuid="a46d17c4-5a17-44d8-9c2a-da6757b69e2b" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
             <seg>i2c_bus</seg>
           </bo>
-          <position x="279.0" y="49.0"/>
+          <position x="286.0" y="49.0"/>
         </element>
         <element uuid="48405e30-8ac8-40ac-9397-c29c2074878f" manual="true">
           <bo>
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="294.0" y="36.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="407b6015-5465-4a79-a2dd-458dbdbf2a7d" manual="true">
@@ -200,7 +196,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>mpu9250</seg>
+          <seg>MPU9250</seg>
         </bo>
         <position x="70.0" y="353.0"/>
         <size width="344.0" height="89.0"/>
@@ -211,7 +207,7 @@
             <seg>feature</seg>
             <seg>uart_bus</seg>
           </bo>
-          <position x="155.0" y="45.0"/>
+          <position x="161.0" y="45.0"/>
         </element>
         <element uuid="0fd982eb-cd63-432d-9bc4-c4057a9d9e1c" manual="true">
           <bo>
@@ -230,28 +226,29 @@
         <element uuid="8207b747-7d77-4cdb-a737-3aef593c73a6" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>syslink_packet_rx</seg>
+            <seg>Syslink_Packet_RX</seg>
           </bo>
-          <position x="164.0" y="42.0"/>
+          <position x="159.0" y="42.0"/>
         </element>
         <element uuid="528578b1-1758-43d7-bdb1-693b5c136fce" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>syslink_packet_tx</seg>
+            <seg>Syslink_Packet_TX</seg>
           </bo>
-          <position x="165.0" y="87.0"/>
+          <position x="161.0" y="87.0"/>
         </element>
         <element uuid="170cad0b-e012-47ad-8987-0f225cd2a7b6" manual="true">
           <bo>
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="247.0" y="119.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="1a085314-6e3a-4aca-92fc-dd7c02ac2aa3" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_processor_binding</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
             <seg>d72ab2da-7e03-4f2e-8607-516ec3aaafe0</seg>
           </bo>
         </element>
@@ -263,7 +260,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>nrf51822_firmware</seg>
+          <seg>nRF51822_Firmware</seg>
         </bo>
         <position x="330.0" y="141.0"/>
         <size width="297.0" height="144.0"/>
@@ -277,7 +274,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>pwm</seg>
+          <seg>PWM</seg>
         </bo>
         <position x="1000.0" y="490.0"/>
         <size width="194.0" height="50.0"/>
@@ -295,7 +292,7 @@
             <seg>feature</seg>
             <seg>pwm_bus</seg>
           </bo>
-          <position x="163.0" y="49.0"/>
+          <position x="168.0" y="49.0"/>
         </element>
         <element uuid="07908c22-50a7-4fd6-9791-ffedf2eaf0f3" manual="true" dockArea="left">
           <bo>
@@ -319,7 +316,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>stm32f405</seg>
+          <seg>STM32F405</seg>
         </bo>
         <position x="730.0" y="338.0"/>
         <size width="238.0" height="139.0"/>
@@ -328,49 +325,49 @@
         <element uuid="e53d2808-b506-47c1-9612-e78609015d80" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>dofs</seg>
+            <seg>DOFs</seg>
           </bo>
           <position y="131.0"/>
         </element>
         <element uuid="a7f8eeb2-71ff-4cf8-8971-0a66816822ff" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>rate_1</seg>
+            <seg>Rate_1</seg>
           </bo>
-          <position x="286.0" y="19.0"/>
+          <position x="289.0" y="19.0"/>
         </element>
         <element uuid="01e5b2cc-bed1-4367-bd77-e01112548f40" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>rate_2</seg>
+            <seg>Rate_2</seg>
           </bo>
-          <position x="286.0" y="64.0"/>
+          <position x="295.0" y="64.0"/>
         </element>
         <element uuid="76d563f4-ddcc-4d4f-982c-3cbcafdde818" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>rate_3</seg>
+            <seg>Rate_3</seg>
           </bo>
-          <position x="286.0" y="109.0"/>
+          <position x="295.0" y="109.0"/>
         </element>
         <element uuid="81353fbc-1d03-4a97-b30b-a133138b9725" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>rate_4</seg>
+            <seg>Rate_4</seg>
           </bo>
-          <position x="286.0" y="154.0"/>
+          <position x="295.0" y="154.0"/>
         </element>
         <element uuid="2c8022a1-2b7c-4df6-af72-8a465db5008d" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>syslink_packet_rx</seg>
+            <seg>Syslink_Packet_Rx</seg>
           </bo>
           <position y="86.0"/>
         </element>
         <element uuid="2ca6450b-3cc1-42ef-bdb7-5244142e1f35" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>syslink_packet_tx</seg>
+            <seg>Syslink_Packet_Tx</seg>
           </bo>
           <position y="41.0"/>
         </element>
@@ -391,7 +388,7 @@
         <element uuid="c634ecac-ea7d-4853-ad85-b020a8b0b496" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_processor_binding</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
             <seg>8667b933-aba5-41ca-8280-e3827e1236aa</seg>
           </bo>
         </element>
@@ -403,7 +400,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>stm32f405_firmware</seg>
+          <seg>STM32F405_Firmware</seg>
         </bo>
         <position x="710.0" y="146.0"/>
         <size width="346.0" height="194.0"/>
@@ -417,10 +414,10 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>uart</seg>
+          <seg>UART</seg>
         </bo>
         <position x="644.0" y="620.0"/>
-        <size width="181.0" height="50.0"/>
+        <size width="182.0" height="50.0"/>
       </element>
       <element uuid="8ea8858c-f9b1-4009-a5a1-2314a35bc6dd" manual="true">
         <bo>
@@ -430,7 +427,7 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>actual</seg>
+        <seg>Actual</seg>
       </bo>
       <position x="50.0" y="460.0"/>
       <size width="1457.0" height="710.0"/>
@@ -440,7 +437,7 @@
         <element uuid="4c9ace70-d2d8-4613-82a9-3a04e7f7655c" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>accelero_out</seg>
+            <seg>Accelero_Out</seg>
           </bo>
           <position x="252.0" y="14.0"/>
         </element>
@@ -449,12 +446,13 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="301.0" y="46.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="0d8e0bf7-59f4-4e8d-96aa-4e546aad8648" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>123f4806-5c06-49b7-8587-a3bd1996e46e</seg>
           </bo>
         </element>
@@ -466,7 +464,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>acc</seg>
+          <seg>Acc</seg>
         </bo>
         <position x="40.0" y="30.0"/>
         <size width="351.0" height="54.0"/>
@@ -475,30 +473,30 @@
         <element uuid="e6859d4e-3392-4622-bf52-90a4ed798551" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>data_f_in</seg>
+            <seg>Data_F_In</seg>
           </bo>
           <position y="19.0"/>
         </element>
         <element uuid="e60f4d2d-c65c-4e5a-9688-81697aac767e" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>gyro_in</seg>
+            <seg>Gyro_In</seg>
           </bo>
           <position y="65.0"/>
         </element>
         <element uuid="85cf5a91-580e-43b9-add8-1a7db25885d5" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>motor_out</seg>
+            <seg>Motor_Out</seg>
           </bo>
-          <position x="160.0" y="19.0"/>
+          <position x="164.0" y="19.0"/>
         </element>
         <element uuid="f7005342-7ee7-4425-a056-cdaa9e2bb19b" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>tc</seg>
+            <seg>TC</seg>
           </bo>
-          <position x="205.0" y="65.0"/>
+          <position x="218.0" y="65.0"/>
         </element>
         <element uuid="2562ff17-dcb4-4305-aa22-7bab7304892b" manual="true">
           <bo>
@@ -517,7 +515,7 @@
         <element uuid="7c8ad696-2a6a-4827-839f-afa3e782dbbb" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>f09968cb-207f-4960-9ab4-3aa8fbfb1dc1</seg>
           </bo>
         </element>
@@ -529,7 +527,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>controller</seg>
+          <seg>Controller</seg>
         </bo>
         <position x="790.0" y="79.0"/>
         <size width="241.0" height="106.0"/>
@@ -538,28 +536,28 @@
         <element uuid="41380258-da69-4cd2-8182-20de25538705" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>accelero_in</seg>
+            <seg>Accelero_In</seg>
           </bo>
           <position y="14.0"/>
         </element>
         <element uuid="59c97b0e-37da-440f-89b4-fd6600afc04a" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>data_f_out</seg>
+            <seg>Data_F_Out</seg>
           </bo>
-          <position x="182.0" y="60.0"/>
+          <position x="183.0" y="60.0"/>
         </element>
         <element uuid="9eb37395-e9d4-4f05-941c-54a28ab56338" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>gyro_in</seg>
+            <seg>Gyro_In</seg>
           </bo>
           <position y="179.0"/>
         </element>
         <element uuid="9c366fc2-d481-406d-bdb6-841f1b424125" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>magneto_in</seg>
+            <seg>Magneto_In</seg>
           </bo>
           <position y="70.0"/>
         </element>
@@ -580,7 +578,7 @@
         <element uuid="73bdb9cc-6f49-47d9-bd7a-abb39272fb40" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>f09968cb-207f-4960-9ab4-3aa8fbfb1dc1</seg>
           </bo>
         </element>
@@ -592,7 +590,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>fusion</seg>
+          <seg>Fusion</seg>
         </bo>
         <position x="470.0" y="30.0"/>
         <size width="268.0" height="245.0"/>
@@ -601,21 +599,22 @@
         <element uuid="e7cfbe7c-0480-4eab-8ee1-51e0f8582d6f" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>gyro_out</seg>
+            <seg>Gyro_Out</seg>
           </bo>
-          <position x="276.0" y="6.0"/>
+          <position x="281.0" y="6.0"/>
         </element>
         <element uuid="367f997a-86e7-4827-b84e-7471c5bfe556" manual="true">
           <bo>
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="301.0" y="38.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="c82d6be0-37a1-4fd3-9a93-635024230ea8" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>123f4806-5c06-49b7-8587-a3bd1996e46e</seg>
           </bo>
         </element>
@@ -627,7 +626,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>gyro</seg>
+          <seg>Gyro</seg>
         </bo>
         <position x="40.0" y="184.0"/>
         <size width="351.0" height="50.0"/>
@@ -636,21 +635,22 @@
         <element uuid="3623137a-d5d3-4aab-8d7b-2d2cd7ea1459" manual="true" dockArea="right">
           <bo>
             <seg>feature</seg>
-            <seg>magneto_out</seg>
+            <seg>Magneto_Out</seg>
           </bo>
-          <position x="252.0" y="16.0"/>
+          <position x="255.0" y="16.0"/>
         </element>
         <element uuid="98e920cc-54ce-4e79-bdff-f627c0db7af5" manual="true">
           <bo>
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="301.0" y="48.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="19b5f89e-f853-49a0-b22e-0e6f39b6c02e" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>123f4806-5c06-49b7-8587-a3bd1996e46e</seg>
           </bo>
         </element>
@@ -662,7 +662,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>magneto</seg>
+          <seg>Magneto</seg>
         </bo>
         <position x="40.0" y="107.0"/>
         <size width="351.0" height="56.0"/>
@@ -671,7 +671,7 @@
         <element uuid="271c3216-951b-41b5-9db7-2e1b30d3e524" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>motor_in</seg>
+            <seg>Motor_In</seg>
           </bo>
           <position y="19.0"/>
         </element>
@@ -680,33 +680,34 @@
             <seg>flow_specification</seg>
             <seg>f1</seg>
           </bo>
+          <position x="50.0" y="51.0"/>
           <primaryLabelPosition x="5.0" y="10.0"/>
         </element>
         <element uuid="1ac4f4e9-333e-415c-8d05-bcc90f956961" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>0dcb5f64-22e1-41c4-972c-014d4b858806</seg>
           </bo>
         </element>
         <element uuid="2e6edd1f-ec39-41f5-847f-6b30d91b5567" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>8f11cee7-9289-4eda-ae0b-e592bc4d0842</seg>
           </bo>
         </element>
         <element uuid="e5ff5c1f-45c4-4dc0-9cee-a312e568619f" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>ac2a2083-975a-4859-80c0-4f054368c960</seg>
           </bo>
         </element>
         <element uuid="f88b77ab-c49c-4445-b9bc-bbd058c413f8" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>b8c41dc2-0359-4992-944b-e5d88b1ce6f0</seg>
           </bo>
         </element>
@@ -718,7 +719,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>motors</seg>
+          <seg>Motors</seg>
         </bo>
         <position x="1080.0" y="79.0"/>
         <size width="271.0" height="59.0"/>
@@ -727,14 +728,14 @@
         <element uuid="f23bb544-6a65-49ce-a679-c1e0d75980c7" manual="true" dockArea="left">
           <bo>
             <seg>feature</seg>
-            <seg>order</seg>
+            <seg>Order</seg>
           </bo>
           <position y="19.0"/>
         </element>
         <element uuid="fc9b7051-7998-4184-ab26-5a4363b5f75f" manual="true">
           <bo>
             <seg>pvg</seg>
-            <seg>deployment_properties::actual_function_binding</seg>
+            <seg>Deployment_Properties::Actual_Function_Binding</seg>
             <seg>40c01cd3-5ecc-4ee7-b93d-379ea2f9c735</seg>
           </bo>
         </element>
@@ -746,7 +747,7 @@
         </element>
         <bo>
           <seg>subcomponent</seg>
-          <seg>pilot</seg>
+          <seg>Pilot</seg>
         </bo>
         <position x="1080.0" y="133.0"/>
         <size width="271.0" height="59.0"/>
@@ -759,14 +760,14 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>functional</seg>
+        <seg>Functional</seg>
       </bo>
       <position x="40.0" y="20.0"/>
       <size width="1401.0" height="411.0"/>
     </element>
     <bo>
       <seg>classifier</seg>
-      <seg>crazyflie_final.impl</seg>
+      <seg>Crazyflie_Final.impl</seg>
     </bo>
     <position x="20.0" y="20.0"/>
     <size width="1540.0" height="1220.0"/>
@@ -783,7 +784,7 @@
     </enabledAadlProperties>
     <context>
       <seg>classifier</seg>
-      <seg>crazyflie_final::crazyflie_final.impl</seg>
+      <seg>Crazyflie_Final::Crazyflie_Final.impl</seg>
     </context>
   </config>
 </diagram:Diagram>

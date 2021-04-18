@@ -51,6 +51,9 @@ public
   flows
     f1 : flow path Accelero_In -> Data_F_Out {latency => 200 us .. 400 us; };	
     f2 : flow path Gyro_In -> Data_F_Out {latency => 200 us .. 400 us; };
+    
+    -- ADAM flow path fom magneto_in to data
+    f3 : flow path Magneto_In -> Data_F_Out {latency => 200 us .. 400 us; };
     	   
   properties
     Dispatch_Protocol => Periodic;
@@ -66,6 +69,7 @@ public
   flows
   	f1 : flow path Data_F_In -> Motor_Out {latency => 200 us .. 400 us; };	
     f2 : flow path Gyro_In -> Motor_Out {latency => 200 us .. 400 us; };	
+    f3 : flow path TC -> Motor_Out {latency => 200 us .. 400 us; };	
     
   properties
     Dispatch_Protocol => Periodic;
@@ -125,6 +129,13 @@ public
   	f_etef1 : end to end flow Gyro.f1 -> C2 -> Fusion.f2 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
   	f_etef1bis : end to end flow Gyro.f1 -> C4 -> Controller.f2 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
     f_etef2 : end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+    
+    -- ADAM: Flow from magneto through sensor fusion to controller to motor
+    f_etef3 : end to end flow Magneto.f1 -> C3 -> Fusion.f3 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+
+    -- ADAM: Flow from pilot to controller to motor
+    f_etef4 : end to end flow Pilot -> C7 -> Controller.f3 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+
     
   end Crazyflie_Functional_Chain.impl;
 

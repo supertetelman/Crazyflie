@@ -40,6 +40,25 @@ public
     etef2 : end to end flow nRF51822_Firmware.f1 -> C10 -> STM32F405_Firmware.f1
       -> C12 -> M1.f1 { latency => 0 ms .. 2 ms;};
 
+    -- ADAM Add connections from MPU to other propellers
+    etef1b : end to end flow MPU9250.f1 -> C11 -> STM32F405_Firmware.f2b
+       -> C13 -> M2.f1 { latency => 0 ms .. 2 ms;};
+    etef1c : end to end flow MPU9250.f1 -> C11 -> STM32F405_Firmware.f2c
+       -> C14 -> M3.f1 { latency => 0 ms .. 2 ms;};
+    etef1d : end to end flow MPU9250.f1 -> C11 -> STM32F405_Firmware.f2d
+       -> C15 -> M4.f1 { latency => 0 ms .. 2 ms;};
+       
+    -- ADAM: Add connecions from RF to other propellers 
+    etef2b : end to end flow nRF51822_Firmware.f1 -> C10 -> STM32F405_Firmware.f1b
+      -> C13 -> M2.f1 { latency => 0 ms .. 2 ms;};
+    etef2c : end to end flow nRF51822_Firmware.f1 -> C10 -> STM32F405_Firmware.f1c
+      -> C14 -> M3.f1 { latency => 0 ms .. 2 ms;};
+    etef2d : end to end flow nRF51822_Firmware.f1 -> C10 -> STM32F405_Firmware.f1d
+      -> C15 -> M4.f1 { latency => 0 ms .. 2 ms;};
+
+    -- ADAM: Add flow from MPU through STM to the RF module
+    etef3 : end to end flow MPU9250.f1 -> C11 -> STM32F405_Firmware.f3 -> C10b -> nRF51822_Firmware.f2 { latency =>  0 ms .. 2 ms;};
+    
   properties
     Actual_Processor_Binding => (reference (STM32F405)) applies to STM32F405_Firmware;
     Actual_Processor_Binding => (reference (nRF51822)) applies to nRF51822_Firmware;

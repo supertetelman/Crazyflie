@@ -8,6 +8,7 @@ public
     Syslink_Packet_RX: in data port Crazyflie_Types::Syslink_Packet;
   flows
     f1 : flow source syslink_Packet_TX{ latency => 1 ms .. 2 ms; };
+    f2 : flow sink syslink_Packet_RX{ latency => 1 ms .. 2 ms; };
 
   end nRF51822_Firmware;
 
@@ -22,9 +23,19 @@ public
     Rate_3         : out data port Crazyflie_Types::PWM_Rate;
     Rate_4         : out data port Crazyflie_Types::PWM_Rate;
 
-  flows
+  	flows
+    -- ADAM Add flows to rate control for other proppellers
     f1 : flow path Syslink_Packet_Rx -> Rate_1;
+    f1b : flow path Syslink_Packet_Rx -> Rate_2;
+    f1c : flow path Syslink_Packet_Rx -> Rate_3;
+    f1d : flow path Syslink_Packet_Rx -> Rate_4;
     f2 : flow path DOFs              -> Rate_1;
+    f2b : flow path DOFs              -> Rate_2;
+    f2c : flow path DOFs              -> Rate_3;
+    f2d : flow path DOFs              -> Rate_4;
+    
+    -- ADAM: Add path for STM to send feedback to RF module
+    f3 : flow path DOFs              -> Syslink_Packet_Tx;
   annex EMV2 {**
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
@@ -75,11 +86,18 @@ public
 
     C9 : port DOFs -> Main_Loop.DOFs;
 
-  flows
-    f1 : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7
-      -> Main_Loop.fs1 -> C3 -> Rate_1;
+  	flows
+  -- ADAM: Connec through the flows to the other proppellers 
+    f1 : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1 -> C3 -> Rate_1;
+    f1b : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1b -> C4 -> Rate_2;
+    f1c : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1c -> C5 -> Rate_3;
+    f1d : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1d -> C6 -> Rate_4;
     f2 : flow path DOFs -> C9 -> Main_Loop.fs2 -> C3 -> Rate_1;
+    f2b : flow path DOFs -> C9 -> Main_Loop.fs2b -> C4 -> Rate_2;
+    f2c : flow path DOFs -> C9 -> Main_Loop.fs2c -> C5 -> Rate_3;
+    f2d : flow path DOFs -> C9 -> Main_Loop.fs2d -> C6 -> Rate_4;
   end STM32F405_Firmware.impl;
+  
 
   thread CRTP_Tx_Task
   features
@@ -125,9 +143,16 @@ public
     Rate_3            : out data port Crazyflie_Types::PWM_Rate;
     Rate_4            : out data port Crazyflie_Types::PWM_Rate;
 
-  flows
+  	flows
+   -- ADAM: Connect the other rate controllers
     fs1 : flow path Syslink_Packet_Rx -> Rate_1;
+    fs1b : flow path Syslink_Packet_Rx -> Rate_2;
+    fs1c : flow path Syslink_Packet_Rx -> Rate_3;
+    fs1d : flow path Syslink_Packet_Rx -> Rate_4;
     fs2 : flow path DOFs              -> Rate_1;
+    fs2b : flow path DOFs              -> Rate_2;
+    fs2c : flow path DOFs              -> Rate_3;
+    fs2d : flow path DOFs              -> Rate_4;
 
   properties
     Priority => 3;
