@@ -48,12 +48,24 @@ public
     Magneto_In  : in data port;
     Data_F_Out  : out data port; -- Fusioned data
     
+    -- ADAM
+    -- Q8 Add new sensor readings to fusion
+    PMW3901_In : in data port;
+    VL53L0x_In : in data port;
+    
   flows
     f1 : flow path Accelero_In -> Data_F_Out {latency => 200 us .. 400 us; };	
     f2 : flow path Gyro_In -> Data_F_Out {latency => 200 us .. 400 us; };
     
     -- ADAM flow path fom magneto_in to data
+    -- Q4
     f3 : flow path Magneto_In -> Data_F_Out {latency => 200 us .. 400 us; };
+    
+    -- Q8
+    -- ADAM Add sensors
+    f4 : flow path PMW3901_In -> Data_F_Out {latency => 200 us .. 400 us; };
+    f5 : flow path VL53L0x_In -> Data_F_Out {latency => 200 us .. 400 us; };
+    
     	   
   properties
     Dispatch_Protocol => Periodic;
@@ -138,5 +150,49 @@ public
 
     
   end Crazyflie_Functional_Chain.impl;
+  
+  
+  -- ADAM:
+  -- Q8 START
+  -- We define he abstract sensor components for he FlowDeck and hen we exend the functional impl wih a v2
+  -- The v2 will be identical, but also include the 2 new sensor reaings and pass them along like the previous 3 values
+  
+   -- Q8 - We create this sensor reading from the FlowDeck just like the other sensors 
+  abstract VL53L0x
+  features
+    VL53L0x_Out : out data port;
+  flows
+    f1 : flow source VL53L0x_Out {latency => 100 us .. 300 us; };		
+  properties
+    Dispatch_Protocol => Periodic;
+    Period => 4 ms; --  250 Hz
+  end VL53L0x;
+  
+  -- Q8 - We create this sensor reading from the FlowDeck just like the other sensors
+  abstract PMW3901
+  	  features
+    PMW3901_Out : out data port;
+  flows
+    f1 : flow source PMW3901_Out {latency => 100 us .. 300 us; };		
+  properties
+    Dispatch_Protocol => Periodic;
+    Period => 4 ms; --  250 Hz
+  end PMW3901;
+  
+  system implementation Crazyflie_Functional_Chain.impl_v2 extends Crazyflie_Functional_Chain.impl
+  subcomponents
+    PMW3901 : abstract PMW3901;
+    VL53L0x : abstract VL53L0x;
+
+  connections
+    C8 : port PMW3901.PMW3901_Out        -> Fusion.PMW3901_In;
+    C9 : port VL53L0x.VL53L0x_Out  -> Fusion.VL53L0x_In;
+  flows
+    f_etef5 : end to end flow PMW3901.f1 -> C8 -> Fusion.f4 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+    f_etef6 : end to end flow VL53L0x.f1 -> C9 -> Fusion.f5 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+    
+ end Crazyflie_Functional_Chain.impl_v2;
+ -- Q8 END
+ -- ADAM:
 
 end Crazyflie_functional;

@@ -17,6 +17,9 @@ public
     Syslink_Packet_Rx : in data port Crazyflie_Types::Syslink_Packet;
     Syslink_Packet_Tx : out data port Crazyflie_Types::Syslink_Packet;
     DOFs           : in data port Crazyflie_Types::Six_Axis.impl;
+    
+    -- ADAM Q8 - Add the flowdeck input to the STM
+    FLOWDECK       : in data port Crazyflie_Types::Flow_Deck.impl;
 
     Rate_1         : out data port Crazyflie_Types::PWM_Rate;
     Rate_2         : out data port Crazyflie_Types::PWM_Rate;
@@ -24,7 +27,7 @@ public
     Rate_4         : out data port Crazyflie_Types::PWM_Rate;
 
   	flows
-    -- ADAM Add flows to rate control for other proppellers
+    -- ADAM Q4 Add flows to rate control for other proppellers
     f1 : flow path Syslink_Packet_Rx -> Rate_1;
     f1b : flow path Syslink_Packet_Rx -> Rate_2;
     f1c : flow path Syslink_Packet_Rx -> Rate_3;
@@ -34,8 +37,15 @@ public
     f2c : flow path DOFs              -> Rate_3;
     f2d : flow path DOFs              -> Rate_4;
     
-    -- ADAM: Add path for STM to send feedback to RF module
+    -- ADAM Q4: Add path for STM to send feedback to RF module
     f3 : flow path DOFs              -> Syslink_Packet_Tx;
+    
+    -- AAM Q8: Ad Flows for FLOWDECK
+    f4  : flow path FLOWDECK          -> Rate_1;
+    f4b  : flow path FLOWDECK          -> Rate_2;
+    f4c : flow path FLOWDECK          -> Rate_3;
+    f4d  : flow path FLOWDECK          -> Rate_4;
+    
   annex EMV2 {**
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
@@ -87,7 +97,7 @@ public
     C9 : port DOFs -> Main_Loop.DOFs;
 
   	flows
-  -- ADAM: Connec through the flows to the other proppellers 
+  -- ADAM: Connect through the flows to the other proppellers 
     f1 : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1 -> C3 -> Rate_1;
     f1b : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1b -> C4 -> Rate_2;
     f1c : flow path Syslink_Packet_Rx -> C2 -> CRTP_Rx_Task.fs1 -> C7 -> Main_Loop.fs1c -> C5 -> Rate_3;
@@ -96,8 +106,8 @@ public
     f2b : flow path DOFs -> C9 -> Main_Loop.fs2b -> C4 -> Rate_2;
     f2c : flow path DOFs -> C9 -> Main_Loop.fs2c -> C5 -> Rate_3;
     f2d : flow path DOFs -> C9 -> Main_Loop.fs2d -> C6 -> Rate_4;
-  end STM32F405_Firmware.impl;
-  
+    
+  end STM32F405_Firmware.impl;  
 
   thread CRTP_Tx_Task
   features
@@ -134,6 +144,9 @@ public
   thread Main_Loop
   features
     DOFs              : in data port Crazyflie_Types::Six_Axis.impl;
+    
+    -- Q8 Adam: Add flowdeck data to main loop so it can be used by the controller
+    FLOWDECK              : in data port Crazyflie_Types::Flow_Deck.impl;
 
     Syslink_Packet_Rx : in data port Crazyflie_Types::Syslink_Packet;
     Syslink_Packet_Tx : out data port Crazyflie_Types::Syslink_Packet;
@@ -153,6 +166,10 @@ public
     fs2b : flow path DOFs              -> Rate_2;
     fs2c : flow path DOFs              -> Rate_3;
     fs2d : flow path DOFs              -> Rate_4;
+    fs3 : flow path FLOWDECK           -> Rate_1;
+    fs3b : flow path FLOWDECK           -> Rate_2;
+    fs3c : flow path FLOWDECK           -> Rate_3;
+    fs3d : flow path FLOWDECK           -> Rate_4;
 
   properties
     Priority => 3;
@@ -160,5 +177,21 @@ public
     Period => 2000 us;
     Compute_Execution_Time => 100 us .. 200 us;
   end Main_Loop;
+
+  -- ADAM:
+  -- Q8 START
+  -- Extend the STM to include an input from the FlowDeck
+  process implementation STM32F405_Firmware.impl_v2
+    extends STM32F405_Firmware.impl
+  connections
+    C10 : 	port FLOWDECK -> Main_Loop.FLOWDECK;
+  flows
+    f4 : flow path FLOWDECK -> C10 -> Main_Loop.fs3 -> C3 -> Rate_1;
+    f4b : flow path FLOWDECK -> C10 -> Main_Loop.fs3b -> C4 -> Rate_2;
+    f4c : flow path FLOWDECK -> C10 -> Main_Loop.fs3c -> C5 -> Rate_3;
+    f4d : flow path FLOWDECK -> C10 -> Main_Loop.fs3d -> C6 -> Rate_4;    
+  end STM32F405_Firmware.impl_v2;
+  -- ADAM:
+  -- Q8 END
 
 end Crazyflie_Software;

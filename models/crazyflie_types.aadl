@@ -31,6 +31,20 @@ public
     Gyro_Z : data Base_Types::Integer_16;
 
   end Six_Axis.impl;
+  
+ -- ADAM
+ -- Q8 - Add base data type for the Flow Deck
+ data Flow_Deck
+ properties
+   Data_Model::Data_Representation => Struct;
+ end Flow_Deck;
+
+-- Q8 - Flow Deck has 16-bit sensor values as defined https://wiki.bitcraze.io/projects:crazyflie2:expansionboards:flow
+data implementation Flow_Deck.impl
+subcomponents
+  VL53L0x : data Base_Types::Integer_16;
+  PMW3901 : data Base_Types::Integer_16;
+ end Flow_Deck.impl;
 
   --------------------
   -- Syslink_Packet --

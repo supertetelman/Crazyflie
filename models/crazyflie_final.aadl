@@ -9,8 +9,10 @@ public
 
   system implementation Crazyflie_Final.impl
   subcomponents
-    Functional : system Crazyflie_Functional::Crazyflie_Functional_Chain.impl;
-    Actual : system Crazyflie_System::Crazyflie_System.impl;
+    Functional : system Crazyflie_Functional::Crazyflie_Functional_Chain.impl_v2;
+    
+    -- Q8 ADAM: Update this to use the impl_v2
+    Actual : system Crazyflie_System::Crazyflie_System.impl_v2;
 
   properties
     Actual_Function_Binding => (reference (Actual.nRF51822_Firmware)) applies to Functional.Pilot;
@@ -18,6 +20,8 @@ public
     Actual_Function_Binding => (reference (Actual.STM32F405_Firmware)) applies to Functional.Fusion; 
     Actual_Function_Binding => (reference (Actual.M1), reference (Actual.M2), reference (Actual.M3), reference (Actual.M4)) applies to Functional.Motors; 
     Actual_Function_Binding => (reference (Actual.MPU9250)) applies to Functional.Gyro, Functional.Acc, Functional.Magneto;
+    Actual_Function_Binding => (reference (Actual.FLOWDECK)) applies to Functional.VL53L0x, Functional.PMW3901;
+    
   end Crazyflie_Final.impl;
 
 end Crazyflie_Final;

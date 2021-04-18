@@ -121,6 +121,50 @@ public
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 3.4e-5 ; Distribution => Fixed;] applies to DOF6.ValueErroneous;     
    **};
   end MPU9250;
+  
+ -- ADAM:
+ -- Q8
+   -------------
+  -- FLOWDECK --
+  -- For the most part, we copy the MPU as a template device, change the data type, and update the possible error
+  -- The FlowDeck is essentially a one-way communication sending additional sensor readings to the STM module, so we simply define f1 as the data source and inegrate it
+  -------------
+  device FLOWDECK
+  features
+    Flow_Data : out data port Crazyflie_Types::Flow_Deck.impl;
+    i2c_bus : requires bus access Buses::I2C::I2C.impl;
+
+  	flows
+    -- We use the same flow source latency because the assumption is that these sensor readings will be similar to the existing board	
+    f1 : flow source Flow_Data { latency => 200 us .. 500 us; };
+
+  properties
+    Dispatch_Protocol => Periodic;
+    Period            => 10 ms;
+    
+  annex EMV2
+   {**
+     use types Crazyflie_Errors;
+     use behavior Crazyflie_Errors::simple;
+
+     error propagations
+       Flow_Data : out propagation{ValueErroneous};
+     flows
+       f1 : error source Flow_Data{ValueErroneous} when failed;
+     end propagations; 
+ 
+     properties
+       EMV2::hazards => 
+        ([  crossreference => "N/A";
+            failure => "value error";
+            phases => ("in flight");
+            description => "Flow Deck starts to send an erroneous value";
+            comment => "Can be critical if not detected by the health monitoring";
+        ]) applies to Flow_Data.ValueErroneous;
+                
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 3.4e-5 ; Distribution => Fixed;] applies to Flow_Data.ValueErroneous;     
+   **};
+  end FLOWDECK; 
 
   ---------------
   -- Propeller --
@@ -152,7 +196,9 @@ public
   subcomponents
     STM32F405 : processor STM32F405;
     nrf51822 : processor nrf51822;
-
+    
+    -- Q8 ADAM: Add a FlowDeck device to the Crazyflie
+    FLOWDECK : device FLOWDECK;
     MPU9250 : device MPU9250;
     M1 : device Propeller;
     M2 : device Propeller;
@@ -176,6 +222,8 @@ public
     C8 : bus access M4.pwm_bus -> PWM;
     C9 : bus access STM32F405.pwm_bus -> PWM;
 
+   -- Q8 ADAM: The FLOWDECK needs to send information directly o the STM
+   C20 : bus access FLOWDECK.i2c_bus -> i2c;
   end Crazyflie.impl;
 
 end Crazyflie_Hardware;

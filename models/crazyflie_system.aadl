@@ -82,5 +82,32 @@ public
     end connection;
   **};
   end Crazyflie_System.impl;
+  
+  -- ADAM:
+  -- Q8 Start
+  -- Extend the Crazyflie_System to include the new FLOWDECK
+  -- This relies on updates to the hardware/software/type definitions
+  -- The end result is new data will be flowed to the controller that can be used to improve navigation using he motors
+  system implementation Crazyflie_System.impl_v2
+     extends Crazyflie_System.impl
+  	subcomponents
+  		STM32F405_Firmware : refined to process Crazyflie_Software::STM32F405_Firmware.impl_v2;
+  	connections
+  	    C16 : port FLOWDECK.Flow_Data -> STM32F405_Firmware.FLOWDECK;
+  		
+  	flows
+  		    -- ADAM Add connections from MPU to other propellers
+    etef4 : end to end flow FLOWDECK.f1 -> C16 -> STM32F405_Firmware.f4
+       -> C12 -> M1.f1 { latency => 0 ms .. 2 ms;};
+    etef4b : end to end flow FLOWDECK.f1 -> C16 -> STM32F405_Firmware.f4b
+       -> C13 -> M2.f1 { latency => 0 ms .. 2 ms;};       
+    etef4c : end to end flow FLOWDECK.f1 -> C16 -> STM32F405_Firmware.f4c
+       -> C14 -> M3.f1 { latency => 0 ms .. 2 ms;};
+    etef4d : end to end flow FLOWDECK.f1 -> C16 -> STM32F405_Firmware.f4d
+       -> C15 -> M4.f1 { latency => 0 ms .. 2 ms;};
+  		
+  	end Crazyflie_System.impl_v2;
+  -- Q8 END
+  -- ADAM
 
 end Crazyflie_System;
