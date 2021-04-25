@@ -256,7 +256,32 @@ public
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
 
+    -- ADAM Q11 - START
+    -- Operational state iff all subcomponents Operational
+    -- Fail if a single component is failing
+    composite error behavior
+    states
+      [ Acc.Operational
+        and Gyro.Operational
+        and Magneto.Operational
+        and Fusion.Operational
+        and Controller.Operational
+        and Motors.Operational
+      ]-> Operational;
+      [ Acc.Failed
+        or Gyro.Failed
+        or Magneto.Failed
+        or Fusion.Failed
+        or Controller.Failed
+        or Motors.Failed
+      ]-> Failed;
+    end composite;
+    -- END
+
     properties
+      -- ADAM Q9 - START
+      -- This section could potentially be removed
+      -- Pending piazza response as to whether or not this components is SW and hazards are restricted to HW only
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
                                         Distribution => Poisson;] applies to Failed;
       EMV2::severity => 1 applies to Failed;
@@ -268,6 +293,7 @@ public
            description => "System is failing";
            comment => "There is a systematic failure";
         ]) applies to Failed;
+      -- ADAM Q9 - END
   **};
   end Crazyflie_Functional_Chain.impl;
 

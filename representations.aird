@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:FaultTree="http://www.aadl.info/FaultTree" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_Y_A6kKWKEeuBq6Vw85pTIg" selectedViews="_ZVCN4KWKEeuBq6Vw85pTIg" version="14.3.1.202003261200">
+    <semanticResources>diagrams/Crazyflie_Final_Crazyflie_Final_impl.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Crazyflie_Hardware_MPU9250.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Crazyflie_Software_STM32F405_Firmware_impl.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Crazyflie_System_Crazyflie_System_impl.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Crazyflie_functional_Crazyflie_Functional_Chain_impl.aadl_diagram</semanticResources>
+    <semanticResources>library/bus_properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl</semanticResources>
+    <semanticResources>library/buses-i2c.aadl</semanticResources>
+    <semanticResources>library/buses-spi.aadl</semanticResources>
+    <semanticResources>library/buses-uart.aadl</semanticResources>
+    <semanticResources>library/processor_properties.aadl</semanticResources>
+    <semanticResources>library/processors-arm.aadl</semanticResources>
+    <semanticResources>library/processors.aadl</semanticResources>
+    <semanticResources>models/crazyflie_errors.aadl</semanticResources>
+    <semanticResources>models/crazyflie_final.aadl</semanticResources>
+    <semanticResources>models/crazyflie_system.aadl</semanticResources>
+    <semanticResources>models/crazyflie_hardware.aadl</semanticResources>
+    <semanticResources>models/crazyflie_types.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.errormodel.contrib/resources/properties/EMV2.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl</semanticResources>
+    <semanticResources>models/crazyflie_software.aadl</semanticResources>
+    <semanticResources>platform:/plugin/cheddar-osate2-properties/resources/properties/Cheddar/Cheddar_Transformation_Properties.aadl</semanticResources>
+    <semanticResources>models/crazyflie_functional.aadl</semanticResources>
+    <semanticResources>models/instances/crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2</semanticResources>
+    <semanticResources>models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_ZVCN4KWKEeuBq6Vw85pTIg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZcCNwKWKEeuBq6Vw85pTIg" name="crazyflie_functional_crazyflie_functional_chain_impl-failed_tree FaultTreeTable" repPath="#_ZYPS4KWKEeuBq6Vw85pTIg" changeId="7c3bda4b-84d8-4c8f-90c3-d7c210cb8ed6">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']"/>
+        <target xmi:type="FaultTree:FaultTree" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_ZYPS4KWKEeuBq6Vw85pTIg" headerColumnWidth="268">
+    <target xmi:type="FaultTree:FaultTree" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#/"/>
+    <lines xmi:type="table:DLine" uid="_ZafVoKWKEeuBq6Vw85pTIg" label=" 'Crazyflie_Functional_Chain.impl'">
+      <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      <lines xmi:type="table:DLine" uid="_ZawbYKWKEeuBq6Vw85pTIg" label=" 'Motors'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zby9M6WKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zby9NaWKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zby9N6WKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zby9OaWKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zby9O6WKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.5"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_ZawbYqWKEeuBq6Vw85pTIg" label=" 'Controller'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zby9PaWKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LUKWKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LUqWKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LVKWKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LVqWKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.4"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_ZawbZKWKEeuBq6Vw85pTIg" label=" 'Fusion'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zb0LWKWKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LWqWKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0LXKWKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0yYaWKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0yY6WKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.3"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_ZawbZqWKEeuBq6Vw85pTIg" label=" 'Magneto'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zb0yZaWKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0yZ6WKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0yaaWKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0ya6WKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb0ybaWKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.2"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_ZawbaKWKEeuBq6Vw85pTIg" label=" 'Acc'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zb1ZcaWKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1Zc6WKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1ZdaWKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1Zd6WKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1ZeaWKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_ZawbaqWKEeuBq6Vw85pTIg" label=" 'Gyro'">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+        <cells xmi:type="table:DCell" uid="_Zb1Ze6WKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1ZfaWKEeuBq6Vw85pTIg" label="" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1Zf6WKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1ZgaWKEeuBq6Vw85pTIg" label="Basic event" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Zb1Zg6WKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+          <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+          <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.1"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+      <cells xmi:type="table:DCell" uid="_ZbD9YKWKEeuBq6Vw85pTIg" label="error state 'Failed'" column="_ZbCvQKWKEeuBq6Vw85pTIg">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ZbkTsaWKEeuBq6Vw85pTIg" label="6.0e-09" column="_ZbCvQqWKEeuBq6Vw85pTIg">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ZbyWIaWKEeuBq6Vw85pTIg" label="1.0e-09" column="_ZbCvRKWKEeuBq6Vw85pTIg">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ZbyWI6WKEeuBq6Vw85pTIg" label="Xor gate" column="_ZbCvRqWKEeuBq6Vw85pTIg">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Zby9MaWKEeuBq6Vw85pTIg" label="no" column="_ZbCvSKWKEeuBq6Vw85pTIg">
+        <target xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+        <semanticElements xmi:type="FaultTree:Event" href="models/instances/reports/fta/crazyflie_functional_crazyflie_functional_chain_impl-failed_tree.faulttree#//@events.6"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_ZbCvQKWKEeuBq6Vw85pTIg" label="Error Model Element/Type" cells="_ZbD9YKWKEeuBq6Vw85pTIg _Zby9M6WKEeuBq6Vw85pTIg _Zby9PaWKEeuBq6Vw85pTIg _Zb0LWKWKEeuBq6Vw85pTIg _Zb0yZaWKEeuBq6Vw85pTIg _Zb1ZcaWKEeuBq6Vw85pTIg _Zb1Ze6WKEeuBq6Vw85pTIg" width="207" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ErrorColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ZbCvQqWKEeuBq6Vw85pTIg" label="Computed Probability" cells="_ZbkTsaWKEeuBq6Vw85pTIg _Zby9NaWKEeuBq6Vw85pTIg _Zb0LUKWKEeuBq6Vw85pTIg _Zb0LWqWKEeuBq6Vw85pTIg _Zb0yZ6WKEeuBq6Vw85pTIg _Zb1Zc6WKEeuBq6Vw85pTIg _Zb1ZfaWKEeuBq6Vw85pTIg" width="171" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ProbabilityColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ZbCvRKWKEeuBq6Vw85pTIg" label="Specified Probability" cells="_ZbyWIaWKEeuBq6Vw85pTIg _Zby9N6WKEeuBq6Vw85pTIg _Zb0LUqWKEeuBq6Vw85pTIg _Zb0LXKWKEeuBq6Vw85pTIg _Zb0yaaWKEeuBq6Vw85pTIg _Zb1ZdaWKEeuBq6Vw85pTIg _Zb1Zf6WKEeuBq6Vw85pTIg" width="164" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ProbabilityColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ZbCvRqWKEeuBq6Vw85pTIg" label="Event/Gate Type" cells="_ZbyWI6WKEeuBq6Vw85pTIg _Zby9OaWKEeuBq6Vw85pTIg _Zb0LVKWKEeuBq6Vw85pTIg _Zb0yYaWKEeuBq6Vw85pTIg _Zb0ya6WKEeuBq6Vw85pTIg _Zb1Zd6WKEeuBq6Vw85pTIg _Zb1ZgaWKEeuBq6Vw85pTIg" width="135" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='EventTypeColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ZbCvSKWKEeuBq6Vw85pTIg" label="Dependent Event" cells="_Zby9MaWKEeuBq6Vw85pTIg _Zby9O6WKEeuBq6Vw85pTIg _Zb0LVqWKEeuBq6Vw85pTIg _Zb0yY6WKEeuBq6Vw85pTIg _Zb0ybaWKEeuBq6Vw85pTIg _Zb1ZeaWKEeuBq6Vw85pTIg _Zb1Zg6WKEeuBq6Vw85pTIg" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='DependentEventColumn']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']"/>
+  </table:DTable>
+</xmi:XMI>
