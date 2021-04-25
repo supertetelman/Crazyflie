@@ -32,6 +32,16 @@ public
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
 
+    -- ADAM Q12 - Add error propogations
+    error propagations
+      Accelero_out: out propagation {ValueError};
+    flows
+      --When the sensor fails, its error is propagated through port Accelero_Out
+      ErrorSource: error source Accelero_out {ValueError} when {ValueError};
+     end propagations;
+    -- ADAM A12 - END
+
+    -- Adam Q9 - START
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
                                         Distribution => Poisson;] applies to Failed;
@@ -44,6 +54,8 @@ public
            description => "Accelero sensor failure";
            comment => "May be critical as no redundancy on UAV";
         ]) applies to Failed;
+    -- Adam Q9 - END
+
   **};
   end Accelero;
 
@@ -63,6 +75,16 @@ public
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
 
+    -- ADAM Q12 - Add error propogations
+    error propagations
+      Gyro_Out: out propagation {ValueError};
+    flows
+      --When the sensor fails, its error is propagated through port Accelero_Out
+      ErrorSource: error source Gyro_Out {ValueError} when {ValueError};  
+     end propagations;
+    -- ADAM A12 - END
+
+    -- Adam Q9 - START
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
                                         Distribution => Poisson;] applies to Failed;
@@ -75,6 +97,8 @@ public
            description => "Gyro sensor failure";
            comment => "May be critical as no redundancy on UAV";
         ]) applies to Failed;
+    -- Adam Q9 - END
+
   **};
   end Gyro;
 
@@ -93,6 +117,15 @@ public
   annex emv2 {**
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
+
+    -- ADAM Q12 - Add error propogations
+    error propagations
+      Magneto_Out: out propagation {ValueError};
+    flows
+      --When the sensor fails, its error is propagated through port Accelero_Out
+      ErrorSource: error source Magneto_Out {ValueError} when {ValueError};
+     end propagations;
+    -- ADAM A12 - END
 
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
@@ -129,6 +162,14 @@ public
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
 
+    -- ADAM Q12 - Add error propogations
+    error propagations
+      Data_F_Out: out propagation {ValueError};
+    flows
+      ErrorSource: error source Data_F_Out {ValueError} when {ValueError};
+     end propagations;
+    -- ADAM A12 - END
+
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
                                         Distribution => Poisson;] applies to Failed;
@@ -162,6 +203,14 @@ public
   annex emv2 {**
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
+    
+    -- ADAM Q12 - Add error propogations
+    error propagations
+      Motor_Out: out propagation {ValueError};
+    flows
+      ErrorSource: error source Motor_Out {ValueError} when {ValueError};
+     end propagations;
+    -- ADAM A12 - END
 
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
