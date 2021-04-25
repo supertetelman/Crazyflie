@@ -1,0 +1,9 @@
+Fault Impact of System Internal Error Sources
+
+Component, Initial Failure Mode, 1st Level Effect, Failure Mode, second Level Effect, Failure Mode, third Level Effect, Failure Mode, 4th Level Effect, Failure Mode, 5th Level Effect, Failure Mode, 6th Level Effect, Failure Mode, 7th Level Effect, More
+Acc,"{ValueError}",{ValueError} Accelero_Out -> Fusion:Accelero_In, Fusion {ValueError} [FlowPath],{ValueError} Data_F_Out -> Controller:Data_F_In, Controller {ValueError} [FlowPath],{ValueError} Motor_Out -> Motors:Motor_In,Motors {ValueError} [Unhandled Failure Effect]
+Fusion,"{ValueError}",{ValueError} Data_F_Out -> Controller:Data_F_In, Controller {ValueError} [FlowPath],{ValueError} Motor_Out -> Motors:Motor_In,Motors {ValueError} [Unhandled Failure Effect]
+Gyro,"{ValueError}",{ValueError} Gyro_Out -> Fusion:Gyro_In, Fusion {ValueError} [FlowPath],{ValueError} Data_F_Out -> Controller:Data_F_In, Controller {ValueError} [FlowPath],{ValueError} Motor_Out -> Motors:Motor_In,Motors {ValueError} [Unhandled Failure Effect]
+Gyro,"{ValueError}",{ValueError} Gyro_Out -> Controller:Gyro_In, Controller {ValueError} [FlowPath],{ValueError} Motor_Out -> Motors:Motor_In,Motors {ValueError} [Unhandled Failure Effect]
+Controller,"{ValueError}",{ValueError} Motor_Out -> Motors:Motor_In,Motors {ValueError} [Unhandled Failure Effect]
+Magneto,"{ValueError}",{ValueError} Magneto_Out -> Fusion:Magneto_In,Fusion {ValueError} [Unhandled Failure Effect]
