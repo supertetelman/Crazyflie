@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<FaultTree:FaultTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:FaultTree="http://www.aadl.info/FaultTree" name="crazyflie_functional_crazyflie_functional_chain_impl-failed_trace" faultTreeType="FaultTrace" root="//@events.22">
+  <instanceRoot href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+  <events name="acc-failed" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" referenceCount="1" scale="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.0"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="gyro-failed" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" referenceCount="1" scale="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="Intermediate1" subEvents="//@events.0 //@events.1" computedProbability="1.99999999800000012456318266643334700667470395199041376710658265210889814000755340728675327257069026994943310393494304011419160360674140974879264831542968750E-9" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1/@condition/@operands.0/@operands.0/@operands.0/@operands.0"/>
+  </events>
+  <events name="magneto-failed" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" referenceCount="1" scale="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.2"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="Intermediate2" subEvents="//@events.2 //@events.3" computedProbability="2.999999993000000194844773497397290342531383051033716878156002461139942815300133541780581952219297352361375356257756129176559074255839727597836052936592669074524705960267738873924288826067457500744533571376278528127357945063701949946354431158608459220481809543035406227895169539374164990874760405858978629112243652343750000E-9" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1/@condition/@operands.0/@operands.0/@operands.0"/>
+  </events>
+  <events name="acc-errorsource-valueerror" assignedProbability="0" referenceCount="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.0"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.0/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@flows.0"/>
+  </events>
+  <events name="acc-out-accelero_out-valueerror" subEvents="//@events.5" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.0"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.0/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.0"/>
+  </events>
+  <events name="Intermediate4" subEvents="//@events.6" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.0/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.0"/>
+  </events>
+  <events name="gyro-errorsource-valueerror" assignedProbability="0" referenceCount="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@flows.0"/>
+  </events>
+  <events name="gyro-out-gyro_out-valueerror" subEvents="//@events.8" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.1"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.0"/>
+  </events>
+  <events name="Intermediate6" subEvents="//@events.9" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.1"/>
+  </events>
+  <events name="Intermediate7" subEvents="//@events.7 //@events.10" computedProbability="0.00" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.0"/>
+  </events>
+  <events name="magneto-errorsource-valueerror" assignedProbability="0" referenceCount="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.2"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@flows.0"/>
+  </events>
+  <events name="magneto-out-magneto_out-valueerror" subEvents="//@events.12" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.2"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.0"/>
+  </events>
+  <events name="Intermediate9" subEvents="//@events.13" assignedProbability="0" computedProbability="0.0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedErrorType href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition/@operands.1/@constraint/@typeTokens.0"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@propagations.2"/>
+  </events>
+  <events name="Intermediate10" subEvents="//@events.11 //@events.14" computedProbability="0.0000" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0/@condition"/>
+  </events>
+  <events name="Intermediate11" subEvents="//@events.15" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" computedProbability="0.00" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.4"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="Intermediate12" subEvents="//@events.4 //@events.16" computedProbability="3.99999998300000029912636361254532558931178397091693099889285261742682141076087046847911799741617297512554338764462934555320147858779356342271829849382330319842062001423320402802879788810917806092272271710407372126833042762178871811415973126724464220242643505580431197018296480658563415694816956222812840926103943247584513853269677525732252104663504107157034410019076663970529076624815267576485366890309291702806631621823336751001410230591800614116103372719705413299972349440837507093619363622696072171575017047137017932470016079971112306668390673534092124479826816276153301544091806615082388648036310898822853765466334152733907103538513183593750000000000E-9" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1/@condition/@operands.0/@operands.0"/>
+  </events>
+  <events name="controller-failed" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" referenceCount="1" scale="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.5"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="Intermediate13" subEvents="//@events.17 //@events.18" computedProbability="4.999999966000000497407952263751100362582804582377528087031143388406977663566550358412578136447615747855522434377704601861297366462004478442420525318020837677560507886806235572512869552865519458307883367395032216174451127547765451135655297388557586008150249403153317654290481832869689232895019055266822324305005457065625713765841444955517780856491327117677979387208594755070452162709063196196365973496844406858499969505390613376404988030258522805128361406854442144102149656784983040185775191740397033269330437930584143592913266497391754018025952020808917657325450562615764635430967933521569717184146300198685174569875012528023634621415225257049197930653521286385245914248269335901219384643324221523891291335240270354415198729391508160774028219658649031545633779807356637811718858186437949999190564193130829738926975619404640447918693570787601136212371559389987432048189864997770382565758697205705692732787984504652108828917022412535138124564526706099444793886115828919416529245469507093197966064250776760772013113147725418944713933479363526248366839369300413079536675619452634046979129863651663431029633527183546274630664017881380881242705389013590165631985868786255335370124244992918817229705568218557554297260852974023397437670082461061698131787235129105603781418665221281116828322410583496093750000000000000000000000E-9" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1/@condition/@operands.0"/>
+  </events>
+  <events name="motors-failed" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" referenceCount="1" scale="1">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#//@componentInstance.6"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+  <events name="Intermediate14" subEvents="//@events.19 //@events.20" computedProbability="5.99999994000000089968953746688828505214965945294853858434645768363844482114799681226987092613181376890729198820533085304731125925396781357702712312561259471539670722090208460887778732111165381845312536723656281735198239533775695844999588687228278435909858437645860691422116209243564682347673107861109230968570423863057106191226918264857121691148651598892440941958996943030895766343102823394440818386300449698460094121903000017808174852223676399732262781411168495886828801944143071379719538224367374445677238157368409866931093223955666073810066297883197598836745669361641430278157197963300298652023238738060699006378726085941979890803046807740824385109655495423750768744174511838347255711784906402561996398689394727548977293774984436281032421624930877694183221231842094104249285149641747907927335798692679111695267704080149750831534485063104344333188856038278604042198843783224861090131591893750269904995911568188772052130953390329777753355841808386363431692169638971291955423910565187910754320455085681911368538342915562550359831228206405687464719423064339338036443530146453363609780507432926121443145159891041678926529202050685001566874233436828741932518427882656878569765335837335528503523149981061986699303412728630311602089718033189037455362144830942916188400993502144549010628939069791434232388308224455635365229239250030036040979430188110873016066904624116044617589072133044652147249218109477414907607365352874639215392491472840906810031970822726498864608703286795616545787837036678829353384274464667640344678989415696133399388614733794603252725425134993423754652816915781842587320219065958503281365357343163219372960175555850178669472742501211057067262652725555876977042638248640177343434007567419178271332132250110272791415799376371504583176082737176616684993023768472466721582925108147319697302206898817809676353725796798119399563918239973587644215822249054019653785747683762006720093922363211795457646539399337009825010467914638945476605321152286718626380697537049331081613427435199502135787982496806991919002422540305958763272330138591226589638756182183902986628547160037248654569298648776177193947261925123958322237336393821433076244408803529646416319240214547439242333901443137177727378200058761724675028984970641475119209359519458203278615032987044058116728311407249503887788778199462061825726883518263599168479401659051899534520747523643916287403726539486646161125447112779605627862527448025478005428303339420796012190903856991004362534343368764699368968571765411542428902985043619903926627625724760415177957723601032072237161189682295023625898874874984301186486845836043357849121093750000000000000000000000000000000000000000000000E-9" referenceCount="1" type="Intermediate" subEventLogic="Xor">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1/@condition"/>
+  </events>
+  <events name="crazyflie_functional_crazyflie_functional_chain_impl-failed" subEvents="//@events.21" assignedProbability="1.0000000000000000622815914577798564188970686927859787829220294952392578125E-9" computedProbability="5.999999940000000899689537466888285052149659452948538584346457683638444821147996812269870926131813768907291988205330853047311259253967813577027123125612594715396707220902084608877787321111653818453125367236562817351982395337756958449995886872282784359098584376458606914221162092435646823476731078611092309685704238630571061912269182648571216911486515988924409419589969430308957663431028233944408183863004496984600941219030000178081748522236763997322627814111684958868288019441430713797195382243673744456772381573684098669310932239556660738100662978831975988367456693616414302781571979633002986520232387380606990063787260859419798908030468077408243851096554954237507687441745118383472557117849064025619963986893947275489772937749844362810324216249308776941832212318420941042492851496417479079273357986926791116952677040801497508315344850631043443331888560382786040421988437832248610901315918937502699049959115681887720521309533903297777533558418083863634316921696389712919554239105651879107543204550856819113685383429155625503598312282064056874647194230643393380364435301464533636097805074329261214431451598910416789265292020506850015668742334368287419325184278826568785697653358373355285035231499810619866993034127286303116020897180331890374553621448309429161884009935021445490106289390697914342323883082244556353652292392500300360409794301881108730160669046241160446175890721330446521472492181094774149076073653528746392153924914728409068100319708227264988646087032867956165457878370366788293533842744646676403446789894156961333993886147337946032527254251349934237546528169157818425873202190659585032813653573431632193729601755558501786694727425012110570672626527255558769770426382486401773434340075674191782713321322501102727914157993763715045831760827371766166849930237684724667215829251081473196973022068988178096763537257967981193995639182399735876442158222490540196537857476837620067200939223632117954576465393993370098250104679146389454766053211522867186263806975370493310816134274351995021357879824968069919190024225403059587632723301385912265896387561821839029866285471600372486545692986487761771939472619251239583222373363938214330762444088035296464163192402145474392423339014431371777273782000587617246750289849706414751192093595194582032786150329870440581167283114072495038877887781994620618257268835182635991684794016590518995345207475236439162874037265394866461611254471127796056278625274480254780054283033394207960121909038569910043625343433687646993689685717654115424289029850436199039266276257247604151779577236010320722371611896822950236258988748749843011864868458360433578491210937500000000000000000000000000000000000000000000000E-9" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../crazyflie_functional_Crazyflie_Functional_Chain_impl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../crazyflie_errors.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+</FaultTree:FaultTree>

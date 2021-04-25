@@ -164,11 +164,28 @@ public
 
     -- ADAM Q12 - Add error propogations
     error propagations
+      Accelero_In : in propagation {ValueError};
+      Gyro_In : in propagation {ValueError};
+      Magneto_In : in propagation {ValueError};
       Data_F_Out: out propagation {ValueError};
     flows
       ErrorSource: error source Data_F_Out {ValueError} when {ValueError};
      end propagations;
     -- ADAM A12 - END
+
+    -- ADAM Q13 - START
+    component error behavior
+    -- Enter a failed state if any single input value is in error
+    transitions
+      t1 : Operational -[ Accelero_In{ValueError}
+                          or Gyro_in{ValueError}
+                          or Magneto_In{ValueError}
+        ]-> Failed;
+    propagations
+      -- If in a Failed state, emit a ValueError
+      Failed -[]-> Data_F_Out{ValueError};
+    end component;
+    -- ADAM Q13 - END
 
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
@@ -206,6 +223,8 @@ public
     
     -- ADAM Q12 - Add error propogations
     error propagations
+      Data_F_In: in propagation {ValueError};
+      Gyro_In: in propagation {ValueError};
       Motor_Out: out propagation {ValueError};
     flows
       ErrorSource: error source Motor_Out {ValueError} when {ValueError};
@@ -243,6 +262,12 @@ public
   annex emv2 {**
     use types Crazyflie_Errors;
     use behavior Crazyflie_Errors::simple;
+
+    -- ADAM Q16 - Add error propogations
+    error propagations
+      Motor_In: in propagation {ValueError};
+     end propagations;
+    -- ADAM A16 - END
 
     properties
       EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;

@@ -1,5 +1,5 @@
 Component, Error Model Element, Hazard Title, Description, Crossreference, Failure, Failure Effect, Operational Phases, Environment,Risk,Mishap, Failure Condition, Severity, Likelihood, Probability,Target Severity, Target Likelihood, Development Assurance Level, Verification Method, Safety Report, Comment
-Root system, "Failed on Failed", , "System is failing", "", "System failure", , "all", , , , , 1, C, , , , , , , "There is a systematic failure"
+Root system, "Failed on Failed", , "System is failing", "", "System failure", , "all", , , , , 1, C, , , , , , , ""
 Acc, "Failed on Failed", , "Accelero sensor failure", "", "Loss of Accelero sensor readings", , "all", , , , , 1, C, , , , , , , "May be critical as no redundancy on UAV"
 Gyro, "Failed on Failed", , "Gyro sensor failure", "", "Loss of Gyro sensor readings", , "all", , , , , 1, C, , , , , , , "May be critical as no redundancy on UAV"
 Magneto, "Failed on Failed", , "Magneto sensor failure", "", "Loss of magneto sensor readings", , "all", , , , , 1, C, , , , , , , "May be critical as no redundancy on UAV"
