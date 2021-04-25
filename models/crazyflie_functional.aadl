@@ -3,6 +3,17 @@ package Crazyflie_functional
 -- This package models the abstract functional chain of the Crazyflie,
 -- from https://wiki.bitcraze.io/doc:crazyflie:dev:fimware:sensor_to_control
 
+-- ADAM Q9 - Severity and liklihood values for reference
+-- Catastrophic : constant aadlinteger => 1;
+-- Hazardous : constant aadlinteger => 2;
+-- Major : constant aadlinteger => 3;
+-- Minor : constant aadlinteger => 4;
+-- NoEffect : constant aadlinteger => 5;
+-- Probable : constant EMV2::LikelihoodLabels => A;
+-- Remote : constant EMV2::LikelihoodLabels => B;
+-- ExtremelyRemote : constant EMV2::LikelihoodLabels => C;
+-- ExtremelyImprobable : constant EMV2::LikelihoodLabels => D;
+
 public
 
   abstract Accelero
@@ -15,6 +26,25 @@ public
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
+  
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Loss of Accelero sensor readings";
+           phases => ("all");
+           description => "Accelero sensor failure";
+           comment => "May be critical as no redundancy on UAV";
+        ]) applies to Failed;
+  **};
   end Accelero;
 
   abstract Gyro
@@ -27,6 +57,25 @@ public
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Loss of Gyro sensor readings";
+           phases => ("all");
+           description => "Gyro sensor failure";
+           comment => "May be critical as no redundancy on UAV";
+        ]) applies to Failed;
+  **};
   end Gyro;
 
   abstract Magneto
@@ -39,6 +88,25 @@ public
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Loss of magneto sensor readings";
+           phases => ("all");
+           description => "Magneto sensor failure";
+           comment => "May be critical as no redundancy on UAV";
+        ]) applies to Failed;
+  **};
   end Magneto;
 
   abstract Sensor_Fusion
@@ -55,6 +123,25 @@ public
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Failed sensor fusion";
+           phases => ("all");
+           description => "Sensor fusion failure";
+           comment => "May be critical as no redundancy on UAV";
+        ]) applies to Failed;
+  **};
   end Sensor_Fusion;
 
   abstract Controller
@@ -70,6 +157,25 @@ public
   properties
     Dispatch_Protocol => Periodic;
     Period => 2 ms; --  500 Hz
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => D applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Controller unresponsive";
+           phases => ("all");
+           description => "Controller is failing";
+           comment => "May be critical as no redundancy on UAV";
+        ]) applies to Failed;
+  **};
   end Controller;
 
   abstract Motors
@@ -83,6 +189,25 @@ public
 --    Dispatch_Protocol => Aperiodic;
     Dispatch_Protocol => Periodic;
     Period => 2ms;
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "Motor failure";
+           phases => ("all");
+           description => "Motor is failing";
+           comment => "Critical failure as control software requires all motors";
+        ]) applies to Failed;
+  **};
   end Motors;
 
   abstract Pilot
@@ -125,7 +250,25 @@ public
   	f_etef1 : end to end flow Gyro.f1 -> C2 -> Fusion.f2 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
   	f_etef1bis : end to end flow Gyro.f1 -> C4 -> Controller.f2 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
     f_etef2 : end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
-    
+
+  -- ADAM Q9 - Add EMV2 to components
+  annex emv2 {**
+    use types Crazyflie_Errors;
+    use behavior Crazyflie_Errors::simple;
+
+    properties
+      EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9 ;
+                                        Distribution => Poisson;] applies to Failed;
+      EMV2::severity => 1 applies to Failed;
+      EMV2::likelihood => C applies to Failed;
+      EMV2::hazards =>
+        ([ crossreference => "";
+           failure => "System failure";
+           phases => ("all");
+           description => "System is failing";
+           comment => "There is a systematic failure";
+        ]) applies to Failed;
+  **};
   end Crazyflie_Functional_Chain.impl;
 
 end Crazyflie_functional;
